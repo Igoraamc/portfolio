@@ -1,7 +1,8 @@
 <script lang="ts">
 	import Hero from '$lib/components/Hero.svelte';
 	import ProjectsSection from '$lib/components/ProjectsSection.svelte';
-	import { projects } from '$lib/data';
+	import SkillsSection from '$lib/components/SkillsSection.svelte';
+	import { projects, skills } from '$lib/data';
 </script>
 
 <svelte:head>
@@ -19,4 +20,5 @@
 </svelte:head>
 
 <Hero />
+<SkillsSection {skills} />
 <ProjectsSection {projects} />

@@ -1,4 +1,23 @@
-import type { Project } from './types';
+import type { Project, SkillCategory } from './types';
+
+export const skills: SkillCategory[] = [
+	{
+		name: 'Languages',
+		skills: ['TypeScript', 'JavaScript', 'Python', 'HTML/CSS']
+	},
+	{
+		name: 'Frontend',
+		skills: ['Svelte / SvelteKit', 'Angular', 'Tailwind CSS', 'Vite']
+	},
+	{
+		name: 'Backend',
+		skills: ['Bun', 'Hono', 'Node.js', 'SQLite']
+	},
+	{
+		name: 'DevOps & Tools',
+		skills: ['Git', 'Docker', 'GitHub Actions', 'Claude API']
+	}
+];
 
 export const projects: Project[] = [
 	{

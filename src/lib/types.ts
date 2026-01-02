@@ -11,3 +11,8 @@ export interface ProjectCardProps {
 	visible?: boolean;
 	delay?: number;
 }
+
+export interface SkillCategory {
+	name: string;
+	skills: string[];
+}
