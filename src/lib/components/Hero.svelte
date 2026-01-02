@@ -25,12 +25,11 @@
 				</p>
 
 				<div class="flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
-					<a
-						href="#contact"
+					<button
 						class="rounded-lg bg-orange-500 px-8 py-3 font-semibold text-white transition-colors hover:bg-orange-600"
 					>
 						Contact Me
-					</a>
+					</button>
 					<a
 						href="#projects"
 						class="rounded-lg border-2 border-gray-700 px-8 py-3 font-semibold text-gray-300 transition-colors hover:border-gray-500 hover:bg-gray-800"
