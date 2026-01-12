@@ -1,7 +1,5 @@
 <script lang="ts">
 	import type { SkillCategory } from '$lib/types';
-	import { fly } from 'svelte/transition';
-	import { cubicOut } from 'svelte/easing';
 
 	let { skills }: { skills: SkillCategory[] } = $props();
 
@@ -43,33 +41,28 @@
 		</div>
 
 		<div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-			{#if visible}
-				{#each skills as category, i (category.name)}
-					<div
-						class="group rounded-xl bg-gray-900 p-6 transition-all duration-300 hover:-translate-y-1 hover:bg-gray-800"
-						in:fly={{
-							y: 20,
-							duration: 500,
-							delay: (i + 1) * 100,
-							easing: cubicOut
-						}}
+			{#each skills as category, i (category.name)}
+				<div
+					class="group rounded-xl bg-gray-900 p-6 transition-all duration-500 ease-out hover:-translate-y-1 hover:bg-gray-800 {visible
+						? 'translate-y-0 opacity-100'
+						: 'translate-y-6 opacity-0'}"
+					style={`transition-delay: ${visible ? (i + 1) * 100 : 0}ms;`}
+				>
+					<h3
+						class="mb-6 border-b border-gray-800 pb-2 text-xl font-semibold text-orange-500 transition-colors group-hover:border-gray-700"
 					>
-						<h3
-							class="mb-6 border-b border-gray-800 pb-2 text-xl font-semibold text-orange-500 transition-colors group-hover:border-gray-700"
-						>
-							{category.name}
-						</h3>
-						<ul class="flex flex-col gap-3">
-							{#each category.skills as skill (skill)}
-								<li class="flex items-center text-gray-300">
-									<span class="mr-2 h-1.5 w-1.5 rounded-full bg-gray-500"></span>
-									{skill}
-								</li>
-							{/each}
-						</ul>
-					</div>
-				{/each}
-			{/if}
+						{category.name}
+					</h3>
+					<ul class="flex flex-col gap-3">
+						{#each category.skills as skill (skill)}
+							<li class="flex items-center text-gray-300">
+								<span class="mr-2 h-1.5 w-1.5 rounded-full bg-gray-500"></span>
+								{skill}
+							</li>
+						{/each}
+					</ul>
+				</div>
+			{/each}
 		</div>
 	</div>
 </section>
