@@ -11,44 +11,71 @@
 
 <section aria-label="Introduction" class="flex min-h-screen items-center bg-gray-950">
 	<div class="container mx-auto px-6 py-16">
-		<div class="flex flex-col items-center gap-12 lg:flex-row">
-			<div
-				class="flex-1 text-center lg:text-left"
-				in:fly={{ y: getY(), duration: getDuration(), easing: cubicOut }}
-			>
-				<p class="mb-2 text-lg text-orange-500 md:text-xl">Hi, I'm</p>
-				<h1 class="mb-4 text-4xl font-bold text-white md:text-5xl lg:text-6xl">Igor Conceição</h1>
-				<p class="mb-6 text-xl text-gray-300 md:text-2xl">Senior Software Engineer</p>
-				<p class="mx-auto mb-8 max-w-xl text-lg text-gray-400 lg:mx-0">
-					I build robust, scalable applications and love turning complex problems into elegant
-					solutions. Passionate about clean code and great user experiences.
+		<div class="grid items-center gap-12 lg:grid-cols-[1.2fr_0.8fr]">
+			<div in:fly={{ y: getY(), duration: getDuration(), easing: cubicOut }}>
+				<h1 class="text-4xl font-bold text-white md:text-5xl lg:text-6xl">Igor Conceição</h1>
+				<p class="mt-3 text-xl font-semibold text-orange-400 md:text-2xl">
+					Senior Software Engineer
 				</p>
-
-				<div class="flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
-					<button
-						class="rounded-lg bg-orange-500 px-8 py-3 font-semibold text-white transition-colors hover:bg-orange-600"
-					>
-						Contact Me
-					</button>
-					<a
-						href="#projects"
-						class="rounded-lg border-2 border-gray-700 px-8 py-3 font-semibold text-gray-300 transition-colors hover:border-gray-500 hover:bg-gray-800"
-					>
-						View Projects
-					</a>
-				</div>
+				<p class="mt-5 max-w-2xl text-lg text-gray-300">
+					Front-end architecture lead who ships high-performance web platforms with crisp UX and
+					maintainable systems.
+				</p>
+				<a
+					href="#projects"
+					class="mt-8 inline-flex items-center gap-2 rounded-full border border-gray-700 px-5 py-2 text-sm font-semibold text-gray-200 transition hover:border-orange-400 hover:text-white"
+				>
+					View projects
+				</a>
 			</div>
 
 			<div
-				class="flex flex-1 justify-center"
+				class="rounded-2xl border border-gray-800 bg-gray-900/70 p-6 shadow-xl backdrop-blur"
 				in:fly={{ y: getY(), duration: getDuration(), delay: getDelay(1), easing: cubicOut }}
 			>
-				<div
-					class="flex h-64 w-64 items-center justify-center rounded-full bg-linear-to-br from-orange-400 to-orange-600 shadow-xl md:h-80 md:w-80"
-				>
-					<span role="img" aria-label="Profile photo placeholder" class="text-6xl text-white">
-						👤
-					</span>
+				<div class="space-y-5 text-sm text-gray-200">
+					<div>
+						<p class="text-xs font-semibold tracking-widest text-gray-400 uppercase">
+							Location / Availability
+						</p>
+						<p class="mt-2 text-base text-gray-200">
+							Vila Nova de Gaia, Portugal · Open to proposals
+						</p>
+					</div>
+					<div>
+						<p class="text-xs font-semibold tracking-widest text-gray-400 uppercase">Focus</p>
+						<p class="mt-2 text-base text-gray-200">Angular, Svelte, SSR, SEO</p>
+					</div>
+					<div>
+						<p class="text-xs font-semibold tracking-widest text-gray-400 uppercase">
+							Achievements
+						</p>
+						<ul class="mt-2 space-y-2 text-base text-gray-200">
+							<li>
+								Reduced CI pipeline execution time by up to 90%, from 20 minutes to as low as 2
+								minutes
+							</li>
+						</ul>
+					</div>
+					<div>
+						<p class="text-xs font-semibold tracking-widest text-gray-400 uppercase">Links</p>
+						<div class="mt-3 flex flex-wrap gap-3 text-base">
+							<a
+								href="https://github.com/igoraamc"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="font-semibold text-orange-300 transition hover:text-orange-200"
+							>
+								GitHub
+							</a>
+							<a
+								href="https://www.linkedin.com/in/igor-a-41b09913a/"
+								class="font-semibold text-orange-300 transition hover:text-orange-200"
+							>
+								LinkedIn
+							</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
