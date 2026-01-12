@@ -30,7 +30,7 @@
 	bind:this={projectsSection}
 	id="projects"
 	aria-label="Projects"
-	class="scroll-mt-8 bg-gray-900 py-20"
+	class="scroll-mt-8 bg-[var(--color-bg)] py-20"
 >
 	<div class="container mx-auto px-6">
 		<div
@@ -39,7 +39,7 @@
 				: 'translate-y-8 opacity-0'}"
 		>
 			<h2 class="mb-4 text-center text-3xl font-bold text-white md:text-4xl">Featured Projects</h2>
-			<p class="mx-auto mb-12 max-w-2xl text-center text-gray-400">
+			<p class="mx-auto mb-12 max-w-2xl text-center text-[var(--color-text-muted)]">
 				A selection of projects that demonstrate my technical skills and problem-solving approach.
 			</p>
 		</div>

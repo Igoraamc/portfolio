@@ -1,6 +1,16 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
 
+:root {
+	--color-bg: #0b0a0f;
+	--color-surface-1: #14121a;
+	--color-surface-2: #1c1824;
+	--color-border: #2a2533;
+	--color-text-muted: #b1a8ba;
+	--color-accent: #f59e0b;
+	--color-accent-hover: #fbbf24;
+}
+
 html {
 	scroll-behavior: smooth;
 }

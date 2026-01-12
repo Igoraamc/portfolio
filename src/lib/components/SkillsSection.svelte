@@ -26,7 +26,7 @@
 	bind:this={section}
 	id="skills"
 	aria-label="Skills and Technologies"
-	class="bg-gray-950 py-20"
+	class="bg-[var(--color-bg)] py-20"
 >
 	<div class="container mx-auto px-6">
 		<div
@@ -35,7 +35,7 @@
 				: 'translate-y-8 opacity-0'}"
 		>
 			<h2 class="mb-4 text-3xl font-bold text-white md:text-4xl">Skills & Technologies</h2>
-			<p class="mx-auto max-w-2xl text-gray-400">
+			<p class="mx-auto max-w-2xl text-[var(--color-text-muted)]">
 				My technical stack is built on modern, performant, and scalable technologies.
 			</p>
 		</div>
@@ -43,20 +43,20 @@
 		<div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
 			{#each skills as category, i (category.name)}
 				<div
-					class="group rounded-xl bg-gray-900 p-6 transition-all duration-500 ease-out hover:-translate-y-1 hover:bg-gray-800 {visible
+					class="group rounded-xl border border-[var(--color-border)] bg-[var(--color-surface-1)] p-6 transition-all duration-500 ease-out hover:-translate-y-1 hover:bg-[var(--color-surface-2)] {visible
 						? 'translate-y-0 opacity-100'
 						: 'translate-y-6 opacity-0'}"
 					style={`transition-delay: ${visible ? (i + 1) * 100 : 0}ms;`}
 				>
 					<h3
-						class="mb-6 border-b border-gray-800 pb-2 text-xl font-semibold text-orange-500 transition-colors group-hover:border-gray-700"
+						class="mb-6 border-b border-[var(--color-border)] pb-2 text-xl font-semibold text-[var(--color-accent)] transition-colors group-hover:border-[var(--color-accent)]"
 					>
 						{category.name}
 					</h3>
 					<ul class="flex flex-col gap-3">
 						{#each category.skills as skill (skill)}
-							<li class="flex items-center text-gray-300">
-								<span class="mr-2 h-1.5 w-1.5 rounded-full bg-gray-500"></span>
+							<li class="flex items-center text-[var(--color-text-muted)]">
+								<span class="mr-2 h-1.5 w-1.5 rounded-full bg-[var(--color-border)]"></span>
 								{skill}
 							</li>
 						{/each}
